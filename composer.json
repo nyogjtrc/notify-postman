@@ -1,0 +1,16 @@
+{
+    "name": "notify-postman",
+    "author": [
+        {
+            "name": "nyo"
+        }
+    ],
+    "request": {
+        "predis/predis": "1.0.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotifyPostman\\": "src"
+        }
+    }
+}

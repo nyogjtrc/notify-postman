@@ -10,6 +10,10 @@ namespace NotifyPostman;
 
 class FakeNotifyRedisHandler extends NotifyRedisHandler
 {
+    public function __construct()
+    {
+    }
+
     public function save()
     {
         return true;

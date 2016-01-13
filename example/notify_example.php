@@ -29,7 +29,7 @@ class Controller
 
     }
 
-    public function publish()
+    public function push()
     {
         return $this->pub->save(new \NotifyPostman\NotifyMessage('test message', 'testing'));
     }
@@ -38,12 +38,20 @@ class Controller
     {
         return $this->sub->pull();
     }
+
+    public function pub()
+    {
+
+    }
+
+    public function sub()
+    {
+
+    }
 }
 
 $controller = new Controller();
-$result = $controller->publish();
-var_dump($result);
-
-$result = $controller->pull();
+$run_method = $argv[1];
+$result = $controller->$run_method();
 var_dump($result);
 
